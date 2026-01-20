@@ -32,6 +32,8 @@ function show(info){
     currTemp.innerText = info.current.temp_c + "°";
     let loca = document.querySelector("#location");
     loca.innerText = info.location.name;
+    let time = document.querySelector("#time");
+    time.innerText = info.location.localtime;
     let overview = document.querySelector("#overview");
     overview.innerText = info.current.condition.text;
     let icon = document.querySelector("#icon");
@@ -116,3 +118,4 @@ input.addEventListener("keydown", (e) => {
     }
 
 });
+
