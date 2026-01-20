@@ -1,11 +1,11 @@
-let url = "https://api.weatherapi.com/v1/forecast.json?key=3d61eb9f416642b396750044261501&q=india&aqi=yes";
+let url = "https://api.weatherapi.com/v1/forecast.json?key=216de174b1594c409bb52022262001&q=london&days=1";
 let input = document.querySelector("input");
 let btn = document.querySelector("button");
 
 async function getWeather(city) {
     try {
         let res = await axios.get(
-            `https://api.weatherapi.com/v1/forecast.json?key=3d61eb9f416642b396750044261501&q=${city}&aqi=yes`
+            `https://api.weatherapi.com/v1/forecast.json?key=216de174b1594c409bb52022262001&q=${city}&days=1`
         );
         return res.data;
     } catch (e) {
@@ -114,4 +114,5 @@ input.addEventListener("keydown", (e) => {
         btn.click();
         input.value = "";
     }
+
 });
